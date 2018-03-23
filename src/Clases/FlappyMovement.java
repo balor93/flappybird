@@ -1,6 +1,7 @@
 package Clases;
 
 import Interfaz.Game;
+import java.awt.Toolkit;
 
 public class FlappyMovement extends Thread {
 
@@ -32,9 +33,11 @@ public class FlappyMovement extends Thread {
             
             double time=(System.currentTimeMillis()-timeInit)/100.0f;
             int y = (int) (yInit+v0*time+0.5*ACELERACION*time*time);
+            Toolkit.getDefaultToolkit().sync(); 
+            Game.jFlappy.setLocation(x, y);
             try {
                     Thread.sleep(getDeltaTime());
-                    Game.jFlappy.setLocation(x, (y + 1));
+                   
                     
             } catch (InterruptedException e) {
                     System.out.println("Ocurrio un problema " + e);
