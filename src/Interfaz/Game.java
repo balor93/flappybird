@@ -245,6 +245,7 @@ public class Game extends javax.swing.JFrame {
         jPipe_up1.setVisible(action);
         jPipe_up2.setVisible(action);
         labelScore.setVisible(action);
+        
     }
 
     public synchronized void detectColision() {
