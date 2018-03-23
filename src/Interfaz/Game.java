@@ -154,7 +154,7 @@ public class Game extends javax.swing.JFrame {
         if (start) {
             if (evt.getExtendedKeyCode() == 32) {
                 this.mvnt_flappy.setDeltaTime(decreaseDeltaTime());
-                this.mvnt_flappy.setJump(true);
+                this.mvnt_flappy.jump();
                 jFlappy.requestFocus(true);
                 MySound.saltar();
             }
@@ -165,7 +165,7 @@ public class Game extends javax.swing.JFrame {
     private void panelImage1MousePressed(java.awt.event.MouseEvent evt) {
         if (start) {
             this.mvnt_flappy.setDeltaTime(decreaseDeltaTime());
-            this.mvnt_flappy.setJump(true);
+            this.mvnt_flappy.jump();
             jFlappy.requestFocus(true);
             MySound.saltar();
         }
@@ -214,25 +214,25 @@ public class Game extends javax.swing.JFrame {
         if (loclz_Flappy.x > (loclz_Tubo1.x - 32) && loclz_Flappy.x < ((loclz_Tubo1.x - 32) + 82) && loclz_Flappy.y < (loclz_Tubo1.y + 318)) {
             MySound.choque();
             this.mvnt_pipes.interrupt();
-            this.mvnt_flappy.setJump(false);
+            //this.mvnt_flappy.setJump(false);
             start = false;
             MySound.caida();
         } else if (loclz_Flappy.x > (loclz_Tubo2.x - 32) && loclz_Flappy.x < ((loclz_Tubo2.x - 32) + 82) && loclz_Flappy.y < (loclz_Tubo2.y + 318)) {
             MySound.choque();
             this.mvnt_pipes.interrupt();
-            this.mvnt_flappy.setJump(false);
+            //this.mvnt_flappy.setJump(false);
             start = false;
             MySound.caida();
         } else if (loclz_Flappy.x > (loclz_Tubo3.x - 32) && loclz_Flappy.x < ((loclz_Tubo3.x - 32) + 82) && loclz_Flappy.y > (loclz_Tubo3.y - 22)) {
             MySound.choque();
             this.mvnt_pipes.interrupt();
-            this.mvnt_flappy.setJump(false);
+            //this.mvnt_flappy.setJump(false);
             start = false;
             MySound.caida();
         } else if (loclz_Flappy.x > (loclz_Tubo4.x - 32) && loclz_Flappy.x < ((loclz_Tubo4.x - 32) + 82) && loclz_Flappy.y > (loclz_Tubo4.y - 22)) {
             MySound.choque();
             this.mvnt_pipes.interrupt();
-            this.mvnt_flappy.setJump(false);
+            //this.mvnt_flappy.setJump(false);
             start = false;
             MySound.caida();
         }
