@@ -98,7 +98,7 @@ public class Game extends javax.swing.JFrame {
         panelImageGame.add(labelScore);
         labelScore.setBounds(0, 10, 400, 49);
 
-        jFlappy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/flappy.png"))); // NOI18N
+        jFlappy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bird2-redim.png"))); // NOI18N
         jFlappy.addKeyListener(new java.awt.event.KeyAdapter() {
             @Override
             public void keyReleased(java.awt.event.KeyEvent evt) {
