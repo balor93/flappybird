@@ -249,7 +249,7 @@ public class Game extends javax.swing.JFrame {
 
     public synchronized void detectColision() {
         int y = jFlappy.getLocation().y;
-        if (y == 448) {
+        if (y == 0 || y >=448) {
             if (MySound.terminochoque) {
                 MySound.choque();
             }
